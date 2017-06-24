@@ -42,11 +42,28 @@ UART_HandleTypeDef huart6;
    ----------------------------------------------------------------------- 
 */
 
+/* --- H11R0 module initialization. 
+*/
+void Module_Init(void)
+{
+	/* Array ports */
+  MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
+  MX_USART3_UART_Init();
+  MX_USART5_UART_Init();
+  MX_USART6_UART_Init();
+	
+	/* USB port */
+  MX_USART4_UART_Init();
+	
+}
+/*-----------------------------------------------------------*/
+
 /* --- H11R0 message processing task. 
 */
-H11R0_Status H11R0_MessagingTask(uint16_t code, uint8_t port, uint8_t src, uint8_t dst)
+Module_Status Module_MessagingTask(uint16_t code, uint8_t port, uint8_t src, uint8_t dst)
 {
-	H11R0_Status result = H11R0_OK;
+	Module_Status result = H11R0_OK;
 	
 	switch (code)
 	{
@@ -61,6 +78,25 @@ H11R0_Status H11R0_MessagingTask(uint16_t code, uint8_t port, uint8_t src, uint8
 
 /*-----------------------------------------------------------*/
 
+/* --- Get the port for a given UART. 
+*/
+uint8_t GetPort(UART_HandleTypeDef *huart)
+{
+	if (huart->Instance == USART2)
+			return P1;
+	else if (huart->Instance == USART6)
+			return P2;
+	else if (huart->Instance == USART3)
+			return P3;
+	else if (huart->Instance == USART1)
+			return P4;
+	else if (huart->Instance == USART5)
+			return P5;
+	else if (huart->Instance == USART4)
+			return P_USB;
+		
+	return 0;
+}
 
 
 /* -----------------------------------------------------------------------
@@ -68,22 +104,6 @@ H11R0_Status H11R0_MessagingTask(uint16_t code, uint8_t port, uint8_t src, uint8
    ----------------------------------------------------------------------- 
 */
 
-/* --- H11R0 module initialization. 
-*/
-void H11R0_Init(void)
-{
-	/* Array ports */
-  MX_USART1_UART_Init();
-  MX_USART2_UART_Init();
-  MX_USART3_UART_Init();
-  MX_USART5_UART_Init();
-  MX_USART6_UART_Init();
-	
-	/* USB port */
-  MX_USART4_UART_Init();
-	
-}
-/*-----------------------------------------------------------*/
 
 
 /*-----------------------------------------------------------*/
