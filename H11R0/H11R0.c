@@ -93,7 +93,7 @@ uint8_t GetPort(UART_HandleTypeDef *huart)
 	else if (huart->Instance == USART5)
 			return P5;
 	else if (huart->Instance == USART4)
-			return P_USB;
+			return P6;
 		
 	return 0;
 }

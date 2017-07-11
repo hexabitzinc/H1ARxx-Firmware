@@ -13,13 +13,17 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "BOS.h"
-
+#include "H11R0_uart.h"	
+#include "H11R0_gpio.h"	
+#include "H11R0_dma.h"	
+	
+	
 /* Exported definitions -------------------------------------------------------*/
 
 #define	modulePN		_H11R0
 
 /* Port-related definitions */
-#define	NumOfPorts		5
+#define	NumOfPorts		6
 #define P_PROG 				P1						/* ST factory bootloader UART */
 
 /* Define available ports */
@@ -28,7 +32,7 @@
 #define _P3
 #define _P4 
 #define _P5 
-#define _PUSB 
+#define _P6 
 
 /* Define available USARTs */
 #define _Usart1 1
@@ -39,12 +43,13 @@
 #define _Usart6	1
 
 /* Port-UART mapping */
-#define P1uart &huart2
-#define P2uart &huart6	
-#define P3uart &huart3
-#define P4uart &huart1
-#define P5uart &huart5	
-#define P_USBuart &huart4
+#define P1uart 			&huart2
+#define P2uart 			&huart6	
+#define P3uart 			&huart3
+#define P4uart 			&huart1
+#define P5uart 			&huart5	
+#define P6uart 			&huart4	
+#define PUSBuart 		P6uart
 
 /* Port Definitions */
 #define	USART1_TX_PIN		GPIO_PIN_9
@@ -85,6 +90,8 @@
 
 /* Module-specific Definitions */
 #ifdef H11R0
+	#define _PUSB 	_P6
+	#define PUSB 		P6
 	#define	USART4_RTS_PIN		GPIO_PIN_15
 	#define	USART4_CTS_PIN		GPIO_PIN_7
 	#define	USART4_RTS_PORT		GPIOA
