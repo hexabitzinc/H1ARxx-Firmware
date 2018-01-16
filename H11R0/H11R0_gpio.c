@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * File Name          : H11R0_gpio.c
+  * File Name          : H1AR0_gpio.c
   * Description        : This file provides code for the configuration
   *                      of all used GPIO pins.
   ******************************************************************************

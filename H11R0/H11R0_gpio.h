@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * File Name          : H11R0_gpio.h
+  * File Name          : H1AR0_gpio.h
   * Description        : This file contains all the functions prototypes for 
   *                      the gpio  
   ******************************************************************************

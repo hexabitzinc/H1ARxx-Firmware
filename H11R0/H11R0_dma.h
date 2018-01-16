@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * File Name          : H11R0_dma.h
+  * File Name          : H1AR0_dma.h
   * Description        : This file contains all the functions prototypes for 
   *                      the DMA  
   ******************************************************************************
