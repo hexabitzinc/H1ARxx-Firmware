@@ -2,8 +2,8 @@
     BitzOS (BOS) V0.1.4 - Copyright (C) 2017 Hexabitz
     All rights reserved
 
-    File Name     : H11R0.c
-    Description   : Source code for module H11R0.
+    File Name     : H1AR0.c
+    Description   : Source code for module H1AR0.
 										USB 2.0 - UART (FT230XQ)
 		
 		Required MCU resources : 
@@ -42,7 +42,7 @@ UART_HandleTypeDef huart6;
    ----------------------------------------------------------------------- 
 */
 
-/* --- H11R0 module initialization. 
+/* --- H1AR0 module initialization. 
 */
 void Module_Init(void)
 {
@@ -59,17 +59,17 @@ void Module_Init(void)
 }
 /*-----------------------------------------------------------*/
 
-/* --- H11R0 message processing task. 
+/* --- H1AR0 message processing task. 
 */
 Module_Status Module_MessagingTask(uint16_t code, uint8_t port, uint8_t src, uint8_t dst)
 {
-	Module_Status result = H11R0_OK;
+	Module_Status result = H1AR0_OK;
 	
 	switch (code)
 	{
 
 		default:
-			result = H11R0_ERR_UnknownMessage;
+			result = H1AR0_ERR_UnknownMessage;
 			break;
 	}			
 

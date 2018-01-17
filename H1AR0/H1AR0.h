@@ -2,20 +2,20 @@
     BitzOS (BOS) V0.1.4 - Copyright (C) 2017 Hexabitz
     All rights reserved
 		
-    File Name     : H11R0.c
-    Description   : Header file for module H11R0.
+    File Name     : H1AR0.c
+    Description   : Header file for module H1AR0.
 										USB 2.0 - UART (FT230XQ)
 */
 	
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef H11R0_H
-#define H11R0_H
+#ifndef H1AR0_H
+#define H1AR0_H
 
 /* Includes ------------------------------------------------------------------*/
 #include "BOS.h"
-#include "H11R0_uart.h"	
-#include "H11R0_gpio.h"	
-#include "H11R0_dma.h"	
+#include "H1AR0_uart.h"	
+#include "H1AR0_gpio.h"	
+#include "H1AR0_dma.h"	
 	
 	
 /* Exported definitions -------------------------------------------------------*/
@@ -89,7 +89,7 @@
 #define	USART6_AF				GPIO_AF5_USART6
 
 /* Module-specific Definitions */
-#ifdef H11R0
+#ifdef H1AR0
 	#define _PUSB 	_P6
 	#define PUSB 		P6
 	#define	USART4_RTS_PIN		GPIO_PIN_15
@@ -101,9 +101,9 @@
 /* H01R0_Status Type Definition */  
 typedef enum 
 {
-  H11R0_OK = 0,
-	H11R0_ERR_UnknownMessage = 1,
-	H11R0_ERROR = 255
+  H1AR0_OK = 0,
+	H1AR0_ERR_UnknownMessage = 1,
+	H1AR0_ERROR = 255
 } Module_Status;
 
 /* Indicator LED */
@@ -152,6 +152,6 @@ extern void MX_USART6_UART_Init(void);
 
 
 
-#endif /* H11R0_H */
+#endif /* H1AR0_H */
 
 /************************ (C) COPYRIGHT HEXABITZ *****END OF FILE****/
