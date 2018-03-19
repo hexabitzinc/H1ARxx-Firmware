@@ -20,7 +20,7 @@
 	
 /* Exported definitions -------------------------------------------------------*/
 
-#define	modulePN		_H11R2
+#define	modulePN		_H1AR2
 
 /* Port-related definitions */
 #define	NumOfPorts		6
