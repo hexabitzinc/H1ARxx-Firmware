@@ -33,6 +33,7 @@
 #define _P4 
 #define _P5 
 #define _P6 
+#define _PUSB 
 
 /* Define available USARTs */
 #define _Usart1 1
