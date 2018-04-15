@@ -60,15 +60,18 @@ extern DMA_HandleTypeDef portMemDMA3;
 extern DMA_HandleTypeDef portPortDMA1;
 extern DMA_HandleTypeDef portPortDMA2;
 extern DMA_HandleTypeDef portPortDMA3;	 
+extern DMA_HandleTypeDef portPortDMA4;
 
 extern uint32_t DMAStream1count;
 extern uint32_t DMAStream2count;
 extern uint32_t DMAStream3count;
+extern uint32_t DMAStream4count;
 extern uint32_t DMAStream1total;
 extern uint32_t DMAStream2total;
 extern uint32_t DMAStream3total;
+extern uint32_t DMAStream4total;
 
-extern UART_HandleTypeDef* dmaStreamDst[3];
+extern UART_HandleTypeDef* dmaStreamDst[4];
 	 
 /* External function prototypes ----------------------------------------------*/
 extern void MX_DMA_Init(void);
@@ -78,9 +81,11 @@ extern void PortMemDMA3_Setup(UART_HandleTypeDef* huart, uint8_t num);
 extern void PortPortDMA1_Setup(UART_HandleTypeDef* huartSrc, UART_HandleTypeDef* huartDst, uint8_t num);
 extern void PortPortDMA2_Setup(UART_HandleTypeDef* huartSrc, UART_HandleTypeDef* huartDst, uint8_t num);
 extern void PortPortDMA3_Setup(UART_HandleTypeDef* huartSrc, UART_HandleTypeDef* huartDst, uint8_t num);
+extern void PortPortDMA4_Setup(UART_HandleTypeDef* huartSrc, UART_HandleTypeDef* huartDst, uint8_t num);
 extern void StopPortPortDMA1(void);
 extern void StopPortPortDMA2(void);
 extern void StopPortPortDMA3(void);
+extern void StopPortPortDMA4(void);
 
 
 #ifdef __cplusplus
