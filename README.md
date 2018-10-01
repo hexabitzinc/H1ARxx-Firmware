@@ -3,8 +3,11 @@
 **H1AR10, H1AR20 and H1AR30 are USB-B-to-UART, Mini USB-B-to-UART and Micro USB-B-to-UART** bridge modules, respectively, based on FTDI FT230XQ-R and STM32F0 MCU. They provide both power and communication through a virtual COM port and have same firmware. These modules are part of Hexabitz modular prototyping system.
 
 Module web page: 
+
 https://hexabitz.com/product/usb-b-to-uart-converter-h1ar10/
+
 https://hexabitz.com/product/usb-b-to-uart-converter-h1ar20/
+
 https://hexabitz.com/product/usb-b-to-uart-converter-h1ar30/
 
 - Check the *References* tab in module page for links to documentation, design files, source code and examples.
