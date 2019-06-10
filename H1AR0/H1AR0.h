@@ -1,5 +1,5 @@
 /*
-    BitzOS (BOS) V0.1.5 - Copyright (C) 2017-2018 Hexabitz
+    BitzOS (BOS) V0.1.6 - Copyright (C) 2017-2019 Hexabitz
     All rights reserved
 		
     File Name     : H1AR0.c
@@ -32,7 +32,6 @@
 #define _P3
 #define _P4 
 #define _P5 
-#define _P6 
 #define _PUSB 
 
 /* Define available USARTs */
@@ -90,14 +89,14 @@
 #define	USART6_AF				GPIO_AF5_USART6
 
 /* Module-specific Definitions */
-#ifdef H1AR0
-	#define _PUSB 	_P6
-	#define PUSB 		P6
-	#define	USART4_RTS_PIN		GPIO_PIN_15
-	#define	USART4_CTS_PIN		GPIO_PIN_7
-	#define	USART4_RTS_PORT		GPIOA
-	#define	USART4_CTS_PORT		GPIOB
-#endif
+#define PUSB 		P6
+#define	USART4_RTS_PIN		GPIO_PIN_15
+#define	USART4_CTS_PIN		GPIO_PIN_7
+#define	USART4_RTS_PORT		GPIOA
+#define	USART4_CTS_PORT		GPIOB
+
+
+#define NUM_MODULE_PARAMS		1
 
 /* H01R0_Status Type Definition */  
 typedef enum 
