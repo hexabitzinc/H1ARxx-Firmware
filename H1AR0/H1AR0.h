@@ -32,6 +32,7 @@
 #define _P3
 #define _P4 
 #define _P5 
+#define _P6 
 #define _PUSB 
 
 /* Define available USARTs */
@@ -127,12 +128,6 @@ extern void MX_USART4_UART_Init(void);
 extern void MX_USART5_UART_Init(void);
 extern void MX_USART6_UART_Init(void);
 
-
-
-/* -----------------------------------------------------------------------
-	|														Message Codes	 														 	|
-   ----------------------------------------------------------------------- 
-*/
 
 
 
