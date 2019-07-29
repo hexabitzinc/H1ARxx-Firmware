@@ -58,6 +58,10 @@ void Module_Init(void)
 	/* USB port */
   MX_USART4_UART_Init();
 	
+	/* Bridge USB and P5 ports by default - only if PUSB is not bridged with any other port */
+	if (portStatus[PUSB] != STREAM)
+		Bridge(PUSB, P5);
+	
 }
 /*-----------------------------------------------------------*/
 
